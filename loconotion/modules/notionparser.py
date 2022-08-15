@@ -720,6 +720,7 @@ class Parser:
 
     def load(self, url):
         self.driver.get(url)
+        time.sleep(20)
         WebDriverWait(self.driver, 60).until(notion_page_loaded())
 
     def run(self):
